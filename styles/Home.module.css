@@ -1,20 +1,10 @@
 .container {
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.loginForm {
-  display: flex;
-  flex-direction: column;
-}
-
-.loginForm > input,
-.loginForm > button {
-  margin-bottom: 20px;
 }
 
 .main {

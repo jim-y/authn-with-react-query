@@ -17,7 +17,10 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
-      "@api/*": ["src/api/*"]
+      "@api/*": ["src/api/*"],
+      "@domain/*": ["src/domain/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@providers/*": ["src/providers/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,52 +1,18 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { useRef } from 'react';
 
 export default function Home() {
-  const formRef = useRef();
-  const submit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(formRef.current);
-    const queryString = new URLSearchParams(formData).toString();
-    fetch('/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/xxx-form-urlencoded'
-      },
-      body: queryString
-    })
-      .then((res) => {
-        if (res.ok) {
-          alert('Successful login');
-        } else {
-          alert('Login failed');
-        }
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <form className={styles.loginForm} onSubmit={submit} ref={formRef}>
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" />
-
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" />
-
-          <button type="submit">Login</button>
-        </form>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
