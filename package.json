@@ -1,5 +1,5 @@
 {
-  "name": "next-with-di",
+  "name": "authn-with-react-query",
   "version": "0.1.0",
   "private": true,
   "scripts": {
